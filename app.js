@@ -2,64 +2,23 @@ const whatsappNumber = "201024165262";
 
 const pdfs = [
   {
-    img: "https://images.unsplash.com/photo-1517842645767-c639042777db?w=500&auto=format&fit=crop&q=80",
-    name: "الحقيبة المتكاملة للأنشطة الصيفية الترفيهية",
-    desc: "دليل عملي يضم 50 فكرة نشاط حركي وفني ممتع للأطفال.",
-    price: 120,
+    img: "imgs/pdf1.avif",
+    name: "ملف الأنشطة الصيفية",
+    desc: "برنامج صيفي جاهز للحضانات يشمل أنشطة تعليمية وترفيهية منظمة للفترة من مايو إلى أغسطس.",
+    price: 200,
   },
   {
-    img: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=500&auto=format&fit=crop&q=80",
-    name: "حزمة الملفات الإدارية المتقدمة للحضانات",
-    desc: "سجلات حضور ونماذج تقييم وجداول يومية لتنظيم الإدارة.",
-    price: 250,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1512314889357-e157c22f938d?w=500&auto=format&fit=crop&q=80", // تم التعديل (رقم 3) - صورة لدفتر تنظيم ومهام مع لمسة نباتية خضراء
-    name: "الجدول الأسبوعي العملي لتنظيم اليوم الافتراضي",
+    img: "imgs/pdf3.avif",
+    name: "الخطة التعليمية الصيفية (مايو – أغسطس)",
     desc: "مخطط مرن وجاهز للطباعة لتنظيم المهام والأنشطة اليومية.",
-    price: 75,
+
+    price: 150,
   },
   {
-    img: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=500&auto=format&fit=crop&q=80",
-    name: "دليل ركن التعايش والقراءة التفاعلية",
-    desc: "خطوات تأسيس ركن قراءة تفاعلي ومحفز للأطفال بالحضانة.",
-    price: 180,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&auto=format&fit=crop&q=80",
-    name: "دفتر تحضير المعلمة المتميز للحضانات",
-    desc: "نموذج جاهز يساعد المعلمة على تنظيم الدروس والأهداف اليومية.",
-    price: 90,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=500&auto=format&fit=crop&q=80",
-    name: "ملف أوراق عمل الحروف العربية بالتنقيط",
-    desc: "أوراق تفاعلية ومبسطة لمساعدة الأطفال على كتابة الحروف.",
-    price: 60,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1588072432836-e10032774350?w=500&auto=format&fit=crop&q=80",
-    name: "كتاب الألعاب الذهنية وتنمية الذكاء",
-    desc: "تمارين ومسابقات مصممة لتطوير مهارات التفكير والتركيز.",
-    price: 110,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=500&auto=format&fit=crop&q=80", // تم التعديل (رقم 8) - صورة بخلفية بيضاء نقية ولمسة خضراء مناسبة للبطاقات والأوراق 
-    name: "بطاقات الأرقام والأشكال التعليمية الملونة",
-    desc: "بطاقات جاهزة للطباعة لتعليم الأرقام والأشكال الهندسية.",
-    price: 50,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1516414447565-b14be0adf13e?w=500&auto=format&fit=crop&q=80",
-    name: "حقيبة بطاقات السلوك الإيجابي للطفل",
-    desc: "وسيلة تربوية مصورة لتشجيع الأطفال على العادات الصحيحة.",
-    price: 70,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=500&auto=format&fit=crop&q=80",
-    name: "دليل تهيئة الطفل لدخول الروضة",
-    desc: "إرشادات عملية لتأهيل الطفل نفسياً واجتماعياً للمرحلة الجديدة.",
-    price: 95,
+    img: "imgs/pdf2.avif",
+    name: "حقيبة جدولي الإدارية والتنظيمية للحضانات",
+    desc: "حقيبة إدارية متكاملة للحضانات تضم نماذج التسجيل والتقييم والعقود واللوائح الجاهزة للاستخدام.",
+    price: 150,
   },
 ];
 const courses = [
@@ -134,7 +93,9 @@ function renderCards(itemsArray, containerId, itemTypeLabel) {
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     cardsHtml += `
       <div class="card">
-        <img width="280" height="200" loading="lazy" src="${item.img}&w=300&q=75" alt="${item.name}">
+      <div class="card-img-wrapper">
+        <img  loading="lazy" src="${item.img}" alt="${item.name}">
+        </div>
         <div class="card-content">
           <h3>${item.name}</h3>
           <p  class="desc">${item.desc}</p>
