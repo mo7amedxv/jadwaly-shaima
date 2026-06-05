@@ -1,5 +1,5 @@
 :root {
-  --primary: #9b0d42;
+  --primary: #111111;
   --primary-hover: #c0185a;
   --bg-tag: #fce4ee;
   --primary-light: #fff0f6;
@@ -89,7 +89,7 @@ header a {
   height: 100%;
   padding: var(--space-md);
   display: block;
-  color: var(--text);
+  color: var(--text-muted);
   transition: var(--transition);
 }
 
@@ -125,11 +125,8 @@ header ul {
   align-items: center;
   justify-content: center;
   background-color: var(--bg-section);
-  background-image:
-    linear-gradient(#e5e7eb 1px, transparent 1px),
-    linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
   background-size: 40px 40px;
-  min-height: 500px;
+  min-height: 600px;
   position: relative;
 }
 .hero-content {
@@ -149,7 +146,8 @@ header ul {
   color: var(--text-muted);
   font-weight: var(--fw-regular);
   font-size: var(--fs-md);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-md);
+  display: block;
 }
 
 .hero h1 {
@@ -160,19 +158,23 @@ header ul {
   line-height: 1.4;
 }
 
-.highlight {
-  color: var(--primary-hover);
-}
 
 .btn-primary {
-  background-color: var(--primary);
+  background-color: var(--primary-hover);
   padding: var(--space-lg) var(--space-xl);
   font-size: var(--fs-lg);
-  justify-self: center;
   transition: var(--transition);
   font-weight: var(--fw-bold);
+  display: block;
+  width: fit-content;
+}
+.hero-img-wrapper img {
+  object-fit: cover;
 }
 @media (min-width: 769px) and (max-width: 900px) {
+  .hero-content {
+    gap: var(--space-md);
+  }
   .hero-img-wrapper {
     width: 320px;
   }
@@ -345,7 +347,8 @@ header ul {
   color: var(--text-muted);
 }
 
-.buy-btn:hover {
+.buy-btn:hover,
+.cta-btn:hover {
   background-color: var(--primary-hover);
 }
 
@@ -373,7 +376,7 @@ header ul {
 
 .rating {
   font-size: var(--fs-xl);
-  color: var(--accent);
+  color: gold;
 }
 
 .fa-whatsapp {
@@ -445,10 +448,27 @@ header ul {
 }
 
 .cta-section {
-  background: var(--primary);
+  background: url("imgs/cta-img.png") no-repeat center/cover;
   padding-top: var(--space-xxl);
   padding-bottom: var(--space-xxl);
   text-align: center;
+  height: 600px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  * {
+    z-index: 999;
+    position: relative;
+  }
+}
+.cta-section:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .cta-heading {
@@ -472,21 +492,17 @@ header ul {
   align-items: center;
   justify-content: center;
   font-size: var(--fs-xl);
+  background-color: var(--primary);
   width: fit-content;
   font-weight: var(--fw-bold);
   justify-self: center;
   margin-top: var(--space-lg);
   padding: var(--space-md) var(--space-lg);
-  background-color: var(--primary-hover);
   transition: var(--transition);
 }
 .footer-btn:hover {
   background-color: var(--primary-hover);
 }
-.cta-section .cta-btn:hover {
-  background-color: var(--whatsapp-hover);
-}
-
 .fab {
   font-size: var(--fs-xxl);
   margin-left: 0.5rem;
@@ -574,10 +590,6 @@ footer .desc {
 
 .footer-heading {
   color: var(--primary-light);
-}
-
-.footer-heading span {
-  color: var(--primary);
 }
 
 .copyright {
@@ -671,11 +683,15 @@ footer ul {
 }
 
 @media (max-width: 768px) {
+  .btn-primary {
+    justify-self: center;
+  }
   .testimonials-grid {
     padding-block: var(--space-md);
   }
   .hero-content {
     grid-template-columns: 1fr;
+    padding-block: var(--space-sm);
   }
   .hero-text {
     padding-top: var(--space-md);
@@ -688,7 +704,9 @@ footer ul {
     padding-inline: 1rem;
     position: relative;
   }
-
+  .hero-content {
+    gap: var(--space-lg);
+  }
   header ul {
     position: absolute;
     width: 100%;
@@ -724,7 +742,7 @@ footer ul {
     display: none;
   }
   .btn-primary {
-    padding: var(--space-lg) var(--space-xl);
+    padding: var(--space-md) var(--space-lg);
   }
 
   .footer-grid {
