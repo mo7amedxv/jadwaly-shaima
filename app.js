@@ -23,64 +23,40 @@ const pdfs = [
 ];
 const courses = [
   {
-    img: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=500&auto=format&fit=crop&q=80",
-    name: "دورة التخطيط الإستراتيجي للأنشطة الصيفية",
-    desc: "ورشة مكثفة لبناء خطة ترفيهية وتعليمية متكاملة للحضانة.",
-    price: 350,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=500&auto=format&fit=crop&q=80", // تم التعديل (رقم 2)
-    name: "ورشة تصميم الوسائل التعليمية المبتكرة",
-    desc: "كورس تطبيقي بالفيديو لصنع مجسمات تعليمية بأدوات بسيطة.",
-    price: 400,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&auto=format&fit=crop&q=80", // تم التعديل (رقم 3)
-    name: "دورة التميز الإداري وتأسيس الحضانات",
-    desc: "خطوات إدارة العمل والتعامل الاحترافي مع أولياء الأمور.",
-    price: 600,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&auto=format&fit=crop&q=80", // تم التعديل (رقم 4)
-    name: "دورة استراتيجيات التعلم النشط للأطفال",
-    desc: "أحدث أساليب التدريس التفاعلية لزيادة استيعاب وتركيز الطفل.",
+    img: "https://images.unsplash.com/photo-1588072432836-e10032774350?w=500&auto=format&fit=crop&q=80",
+    name: "كورس إعداد معلمة اللغة العربية (نور البيان)",
+    desc: "تأسيس القراءة والكتابة، الحركات والمدود، وأنشطة تطبيقية لتعليم الطفل خطوة بخطوة.",
     price: 300,
   },
   {
-    img: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80", // تم التعديل (رقم 5)
-    name: "دورة تعديل السلوك والمشكلات النفسية",
-    desc: "طرق تربوية عملية للتعامل مع عناد أو عدوانية الأطفال.",
-    price: 450,
+    img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500&auto=format&fit=crop&q=80",
+    name: "كورس إعداد معلمة اللغة الإنجليزية",
+    desc: "Jolly Phonics، المنهج، لغة الفصل، وخطط دروس وأنشطة تفاعلية للأطفال.",
+    price: 320,
   },
   {
-    img: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=500&auto=format&fit=crop&q=80", // تم التعديل (رقم 6)
-    name: "دورة مهارات ومعايير معلمة الروضة المحترفة",
-    desc: "تأهيل شامل لامتلاك مهارات الشرح الجذاب وإدارة الفصل.",
+    img: "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=500&auto=format&fit=crop&q=80",
+    name: "كورس إعداد معلمة رياضيات رياض الأطفال",
+    desc: "تأسيس الأعداد، العمليات الحسابية، وألعاب تعليمية وأنشطة حسية ممتعة.",
     price: 280,
   },
   {
-    img: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&auto=format&fit=crop&q=80",
-    name: "ورشة أساسيات الحساب الذهني (اليوسي ماس)",
-    desc: "تمكين المعلمات من تدريس مهارات الحساب السريع للأطفال.",
-    price: 500,
+    img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&auto=format&fit=crop&q=80",
+    name: "كورس معلمة القرآن الكريم والتربية الإسلامية",
+    desc: "تحفيظ القرآن، السلوكيات الإسلامية، وقصص الأنبياء للأطفال بأسلوب مبسط.",
+    price: 260,
   },
   {
-    img: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=500&auto=format&fit=crop&q=80",
-    name: "دورة صعوبات التعلم عند الأطفال وطرق علاجها",
-    desc: "كيفية اكتشاف مشكلات القراءة والكتابة والتعامل معها بفعالية.",
-    price: 380,
+    img: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=500&auto=format&fit=crop&q=80",
+    name: "كورس إدارة الحضانات والأكاديميات",
+    desc: "إدارة الحضانة، الملفات، التسويق، التعامل مع الأهالي وتحسين الأداء الإداري.",
+    price: 600,
   },
   {
-    img: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=500&auto=format&fit=crop&q=80", // تم التعديل (رقم 9)
-    name: "ورشة فن سرد القصص ومسرح العرائس",
-    desc: "تقنيات لغة الجسد وتغيير الصوت لجذب انتباه الطفل للقصة.",
-    price: 220,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&auto=format&fit=crop&q=80", // تم التعديل (رقم 10)
-    name: "دورة التسويق الفعال واجتذاب العملاء للحضانات",
-    desc: "خطة تسويقية لزيادة المشتركين وبناء سمعة قوية للحضانة.",
-    price: 550,
+    img: "https://cdn-res.keymedia.com/cdn-cgi/image/f=auto/https://cdn-res.keymedia.com/cms/images/ca/126/0395_637756306103800235.jpg",
+    name: "كورس إدارة الصف والمهارات المهنية للمعلمات",
+    desc: "إدارة الفصل، ضبط السلوك، حل المشكلات والتواصل الفعال مع أولياء الأمور.",
+    price: 350,
   },
 ];
 function renderCards(itemsArray, containerId, itemTypeLabel) {
