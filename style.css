@@ -13,7 +13,7 @@
   --whatsapp-hover: #1ebe5d;
   --header-bg: rgba(255, 255, 255, 0.15);
   --font: "Readex Pro", sans-serif;
-  --transition: 0.3s ease;
+  --transition: 150ms ease;
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-bold: 600;
@@ -90,7 +90,6 @@ header a {
   padding: var(--space-md);
   display: block;
   color: var(--text-muted);
-  transition: var(--transition);
 }
 
 header .logo {
@@ -194,7 +193,6 @@ header ul {
 .developer {
   text-decoration: underline;
   color: #e11f6c;
-  transition: var(--transition);
 }
 .developer:hover {
   color: #ff2a7f;
@@ -257,7 +255,6 @@ header ul {
   display: flex;
   flex-direction: column;
   scroll-snap-align: start;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow:
     0 1px 6px rgba(0, 0, 0, 0.06),
     0 0 0 1px rgba(0, 0, 0, 0.04);
@@ -523,7 +520,6 @@ header ul {
   font-size: var(--fs-xxl);
   margin-left: 0.5rem;
   color: var(--primary-light);
-  transition: var(--transition);
 }
 
 .stats-container {
@@ -583,7 +579,6 @@ header ul {
   height: 100%;
   background-color: var(--primary);
   border-radius: var(--radius-lg);
-  transition: background-color 0.3s ease;
 }
 
 .scroll-thumb:hover,
@@ -640,7 +635,6 @@ footer ul {
 }
 
 .footer-item ul a {
-  transition: var(--transition);
   color: #ccc;
 }
 
@@ -664,7 +658,6 @@ footer ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: var(--transition);
   margin-top: var(--space-md);
 }
 
