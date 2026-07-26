@@ -697,6 +697,7 @@ footer ul {
 @media (max-width: 768px) {
   .btn-primary {
     justify-self: center;
+    margin-inline: auto;
   }
   .testimonials-grid {
     padding-block: var(--space-md);
